@@ -10,9 +10,10 @@ He is a graduate of the University of Pennsylvania's Digital Media Design progra
 
 In his free time, he likes to practice sitar, read math textbooks, and create music.
 
-## Projects
+# Projects
 
 <table style="width:100%">
+
   <tr>
     <td style="width:50%">
       <a href="./project-grid-diagrams.html">
@@ -39,11 +40,34 @@ In his free time, he likes to practice sitar, read math textbooks, and create mu
     </td>
   </tr>
 
+  <tr>
+    <td style="width:50%">
+      <a href="./project-flow.html">
+        <img src="./assets/img/project-flow.png"/>
+      </a>
+    </td>
+  </tr>
+
 </table>
 
-## Experiments
+# R+D
 
-Experiments go here.
+<table style="width:100%">
+
+  <tr>
+    <td style="width:50%">
+      <a href="./project-miura-ori.html">
+        <img src="./assets/img/project-miura-ori.png"/>
+      </a>
+    </td>
+    <td style="width:50%">
+      <a href="./project-sdfperf.html">
+        <img src="./assets/img/project-sdfperf.png"/>
+      </a>
+    </td>
+  </tr>
+
+</table>
 
 
 

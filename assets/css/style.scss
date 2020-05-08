@@ -2,3 +2,35 @@
 ---
 
 @import "{{ site.theme }}";
+
+@font-face { 
+	font-family: 'Roboto Mono';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/RobotoMono/RobotoMono-Regular.ttf');
+}
+
+@font-face { 
+	font-family: 'Roboto Mono';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../fonts/RobotoMono/RobotoMono-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Mono';
+	font-weight: 400;
+	font-style: italic;
+	src: url('../fonts/RobotoMono/RobotoMono-Italic.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Mono';
+	font-weight: 700;
+	font-style: italic;
+	src: url('../fonts/RobotoMono/RobotoMono-BoldItalic.ttf');
+}
+
+body {
+  font: 14px/1.5 "Roboto Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
