@@ -54,13 +54,6 @@ Use your mouse to add points in the upper canvas. The points will be connected t
 - Press the `save` button to export the crease pattern as a [.FOLD file](https://github.com/edemaine/fold)
 - Adjust the `repetitions` slider to change the number of times that the crease pattern is repeated vertically (this corresponds to the "width" of your paper, while the horizontal axis corresponds to the "length")
 
-## To Do
-- [ ] Make the user-generated path editable (probably would need to look into some form of SVG rendering)
-- [ ] Create a slider that adjusts the strip width
-- [ ] Calculate the shallow angle based on the strip width (currently, this is hard-coded)
-- [ ] Create a `Generator` base class, from which `GeneratingStrip` inherits
-- [ ] Test on Explorer, Chrome, and Safari
-
 ## Credits
 This project was largely inspired by Robert Lang's book, [Twists, Tilings, and Tessellations](https://langorigami.com/publication/twists-tilings-and-tessellations-mathematical-methods-for-geometric-origami/), which outlines the theoretical / mathematical implications of semigeneralized Miura-ori crease patterns (see `Chapter 2`). The [.FOLD file format](https://github.com/edemaine/fold) is maintained by Erik Demaine and colleagues.
 
