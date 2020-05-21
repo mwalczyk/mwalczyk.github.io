@@ -6,7 +6,7 @@ layout: default
 
 If you've ever visited Shadertoy, you've probably seen ray marching in action. It's an interesting technique that can be used to generate fully procedural environments entirely from a single fragment shader. Unfortunately, there aren't a ton of great resources for learning these techniques. So, I wanted to create a quick tutorial on setting up a basic ray marching shader. I will be using Derivative's TouchDesigner for rendering, but you should be able to port this to any other 3D environment fairly easily. In future blog posts, we will build upon the topics covered in this tutorial to create more interesting scenes!
 
-> Aside: If you are working with TouchDesigner, all you will need for this tutorial is a single GLSL TOP. In the 
+> If you are working with TouchDesigner, all you will need for this tutorial is a single GLSL TOP. In the 
 > "Common" tab, I changed the "Output Resolution" parameter from "Use Input" to "Custom Resolution," `720 x 720`.
 
 <p align="center">
@@ -38,9 +38,15 @@ float distance_from_sphere(in vec3 p, in vec3 c, float r)
 
 And if you aren't convinced, check out the diagram below. Here, `||p - c||` denotes the length or norm of the vector `p - c`, which points from the center of the sphere `c` to `p`. Convince yourself that `||p - c|| - r` does, in fact, give us the distance from `p` to the closest point on the sphere. The code snippet above is our first signed distance function. This function is "signed" because it returns a negative value, zero, or a positive value, depending on whether we are inside, on the surface of, or outside the sphere, respectively. We can write these three cases:
 
-- `||p - c|| < r`, we are somewhere inside the sphere and `||p - c|| - r` is negative
-- `||p - c|| = r`, we are somewhere on the surface of the sphere and `||p - c|| - r` is zero
-- `||p - c|| > r`, we are somewhere outside the sphere and `||p - c|| - r` is positive
+### Case 1
+`||p - c|| < r`, which means we are somewhere inside the sphere. This implies that
+`||p - c|| - r` is negative.
+
+### Case 2
+`||p - c|| = r`, which means we are somewhere on the surface of the sphere. This implies that `||p - c|| - r` is zero
+
+### Case 3
+`||p - c|| > r`, which means we are somewhere outside the sphere. This implies that `||p - c|| - r` is positive
 
 <p align="center">
   <img src="assets/img/blog/ray-marching/circle-distance.png" width="500" height="auto"/>
@@ -52,7 +58,7 @@ Ok, so we have a basic SDF, and we know how to evaluate it at any point in 3D sp
 
 In order to render our scene, we are going to use a technique called **ray marching**. At a high level, we will shoot out a bunch of imaginary rays from a virtual camera that is looking at our world. For each of these rays, we are going to "march" along the direction of the ray, and at each step, evaluate our SDF (the `distance_from_sphere` function that we wrote above). This will tell us: "from where I currently stand, how far am I from the closest point on the surface of our sphere?"
 
-> Aside: If you are familiar with **ray tracing**, you might wonder why we can't just directly compute the point of 
+> If you are familiar with **ray tracing**, you might wonder why we can't just directly compute the point of 
 > intersection between our ray and our sphere. For this simple scene, we actually could do this! However, as we will 
 > see towards the end of this tutorial, the real power of ray marching lies in its ability to render shapes where this 
 > exact point of intersection is not as obvious.
@@ -129,7 +135,7 @@ So, we have a function that performs ray marching along a given ray. The last th
 
 We know that a ray has two components: an origin and a direction. We are going to imagine that each ray starts at the camera and passes through an imaginary "image plane" that sits somewhere in front of our camera. Remember that all of our code will execute inside of a single fragment shader, so there is a bit of a leap, where we somehow have to describe a 3D world from the 2D plane that our fragment shader executes over. A fragment shader executes once for each pixel that makes up our final, rendered image. At each pixel location, we can derive a UV-coordinate in the range [0.0, 1.0]. In TouchDesigner, this is passed from the [vertex shader to the fragment shader](https://www.khronos.org/opengl/wiki/Type_Qualifier_(GLSL)#Shader_stage_inputs_and_outputs) as the variable `vUV.st`.
 
-> Aside: If you are following along with this tutorial and not using TouchDesigner, the specifics of where your 
+> If you are following along with this tutorial and not using TouchDesigner, the specifics of where your 
 > UV-coordinates come from will be implementation defined. Regardless of what framework / toolkit you're using, you 
 > just need to be able to draw a full-screen quad and calculate UV-coordinates, either by normalizing the built-in 
 > variable `gl_FragCoord.xy`, or otherwise. Also, if you are rendering an image that is not square, you will need to 
@@ -217,7 +223,7 @@ Now that we have our sphere, let's try to calculate some basic shading so that w
 
 The idea is, we can "nudge" our point p slightly in the positive and negative direction along each of the X/Y/Z axes, recalculate our SDF, and see how the values change. If you are familiar with vector calculus, we are essentially calculating the [gradient](https://en.wikipedia.org/wiki/Gradient) of the distance field at p. In 2D, you might be familiar with the **derivative**, which gives the rate of change of a function with respect to its input. You might also have seen this visualized as the slope of the line that lies [tangent to the function](https://en.wikipedia.org/wiki/Derivative) at some point. The gradient is just the extension of this to functions of multiple dimensions (our SDF has 3 dimensions, X/Y/Z). Normals should generally be unit vectors, so we'll normalize it as well. This method lets us to calculate normals for arbitrarily complex objects, provided we have the appropriate SDF to represent its surface.
 
-> Aside: I realize this explanation is a bit "hand-wavy" at the moment! It took me a while to understand how and why 
+> I realize this explanation is a bit "hand-wavy" at the moment! It took me a while to understand how and why 
 > this way of calculating normals works. I recommend sitting with the code for a bit - after some reflection, it 
 > should start to make sense. I am working on a better way to explain / illustrate this and will hopefully update 
 > this post in the future with a more concrete explanation.

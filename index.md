@@ -68,6 +68,10 @@ layout: default
 
 </table>
 
+## Blog Posts
+
+[Ray Marching](./blog-ray-marching.html)
+
 ## About
 
 I am a media artist and graphics programmer currently based in Portland, Oregon. I build custom software that explores topics like computational origami, knot theory, geometry, and folding.
@@ -87,9 +91,7 @@ This website showcases a few of my personal projects. I also post (a ton of) exp
 > physical materials and digital simulation, embraces the inherent  randomness and error that occur in both 
 > virtual and analog domains.
 
-## Blog
 
-[Ray Marching](./blog-ray-marching.html)
 
 
 
