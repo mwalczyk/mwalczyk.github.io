@@ -10,6 +10,9 @@ layout: default
 </p>
 
 ## Description
+
+`flow` is a minimal, progressive path tracer implemented in Vulkan with GLSL shaders. It renders a small group of implicit surfaces (spheres, boxes, planes, etc.) with several different material models (primarily lambertian, metallic, and dielectric).
+
 For the time being, `flow` uses a single render pass instance with two distinct subpasses. The first subpass involves two floating-point images in a "ping-pong" arrangement. This is how the light accumulates over the course of many frames, leading to a well-converged image. Whichever of the two images was used as a color attachment during this first subpass serves as an input attachment to the next (and final) subpass. Input attachments are unique to Vulkan and allow a render pass attachment to be read in a fragment shader stage during a subpass. Input attachments come with several restrictions and do not support random access like a typical `sampler2D`, for example.
 
 The second subpass simply reads from this input attachment and writes to one of the swapchain images that are presented to the screen. 

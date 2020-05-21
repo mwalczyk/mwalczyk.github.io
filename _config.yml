@@ -5,11 +5,11 @@ description: >
   Media Artist & Graphics Programmer
   <br>
   <br>
-  <a href="https://www.instagram.com/mwalczyk/">📷 Instagram</a> 
+  <a href="https://www.instagram.com/mwalczyk/" target="_blank">📷 Instagram</a> 
   <br>
-  <a href="https://github.com/mwalczyk">💻 Github</a>
+  <a href="https://github.com/mwalczyk" target="_blank">💻 Github</a>
   <br>
-  <a href="https://www.linkedin.com/in/mike-walczyk-37267358">📝 LinkedIn</a>
+  <a href="https://www.linkedin.com/in/mike-walczyk-37267358" target="_blank">📝 LinkedIn</a>
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal

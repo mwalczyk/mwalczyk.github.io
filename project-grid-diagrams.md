@@ -13,7 +13,7 @@ layout: default
 
 ### Grid Diagrams
 
-One interesting way to represent knots (a *presentation* of the knot) is via a so-called `n`x`n` *grid diagram*. The contents of each grid cell is `x`, `o`, or "blank." A grid diagram has the property that every row and column has _exactly_ one `x` and one `o`. We can construct the knot corresponding to a particular grid diagram using the following algorithm:
+One interesting way to represent knots (a *presentation* of the knot) is via a so-called `n x n` *grid diagram*. The contents of each grid cell is `x`, `o`, or "blank." A grid diagram has the property that every row and column has _exactly_ one `x` and one `o`. We can construct the knot corresponding to a particular grid diagram using the following algorithm:
 
 1. In each column, connect each `x` to the corresponding `o` 
 2. In each row, connect each `o` to the corresponding `x`

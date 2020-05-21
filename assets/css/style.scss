@@ -38,18 +38,15 @@
 	src: url('../fonts/InputMono/InputMono-Regular.ttf');
 }
 
-// p {
-// 	font: 14px/1.5 "AlteHaasGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-// 	line-height: 20px;
-// 	font-smooth: never;
-// }
+h1, h2, h3, h4, p, a, code {
+	font: "Helvetica Neue";
+}
 
-// h1, h2, h3 {
-// 	font: 20px/1.5 "InputMono", "Helvetica Neue", Helvetica, Arial, sans-serif;
-// }
+a:hover, a:focus {
+	font-weight: normal;
+}
 
 code {
-	font: 12px/1.5 "InputMono", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: hsl(315, 100%, 40%);
 }	
 
