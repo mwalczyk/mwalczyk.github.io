@@ -45,6 +45,11 @@ These are a few of the projects I have worked on. I also post (a ton of) experim
         <img src="./assets/img/project-flow.png"/>
       </a>
     </td>
+    <td style="width:33%">
+      <a href="./project-polychora.html">
+        <img src="./assets/img/project-polychora.png"/>
+      </a>
+    </td>
   </tr>
 
 </table>

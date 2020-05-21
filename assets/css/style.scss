@@ -3,37 +3,55 @@
 
 @import "{{ site.theme }}";
 
-// @font-face { 
-// 	font-family: 'Roboto Mono';
-// 	font-weight: 400;
-// 	font-style: normal;
-// 	src: url('../fonts/RobotoMono/RobotoMono-Regular.ttf');
-// }
-
-// @font-face { 
-// 	font-family: 'Roboto Mono';
-// 	font-weight: 700;
-// 	font-style: normal;
-// 	src: url('../fonts/RobotoMono/RobotoMono-Bold.ttf');
-// }
-
-// @font-face {
-// 	font-family: 'Roboto Mono';
-// 	font-weight: 400;
-// 	font-style: italic;
-// 	src: url('../fonts/RobotoMono/RobotoMono-Italic.ttf');
-// }
-
-// @font-face {
-// 	font-family: 'Roboto Mono';
-// 	font-weight: 700;
-// 	font-style: italic;
-// 	src: url('../fonts/RobotoMono/RobotoMono-BoldItalic.ttf');
-// }
-
-body {
-  font: 14px/1.5 "Roboto Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-face { 
+	font-family: 'AlteHaasGrotesk';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/AlteHaasGrotesk/AlteHaasGroteskRegular.ttf');
 }
+
+@font-face { 
+	font-family: 'AlteHaasGrotesk';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../fonts/AlteHaasGrotesk/AlteHaasGroteskBold.ttf');
+}
+
+@font-face {
+	font-family: 'AlteHaasGrotesk';
+	font-weight: 400;
+	font-style: italic;
+	src: url('../fonts/AlteHaasGrotesk/AlteHaasGrotesk-Italic.ttf');
+}
+
+@font-face {
+	font-family: 'AlteHaasGrotesk';
+	font-weight: 700;
+	font-style: italic;
+	src: url('../fonts/AlteHaasGrotesk/AlteHaasGroteskBoldItalic.ttf');
+}
+
+@font-face {
+	font-family: 'InputMono';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/InputMono/InputMono-Regular.ttf');
+}
+
+// p {
+// 	font: 14px/1.5 "AlteHaasGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// 	line-height: 20px;
+// 	font-smooth: never;
+// }
+
+// h1, h2, h3 {
+// 	font: 20px/1.5 "InputMono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// }
+
+code {
+	font: 12px/1.5 "InputMono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: hsl(315, 100%, 40%);
+}	
 
 table {
 	border-spacing: 0px;
@@ -42,9 +60,4 @@ table {
 
 td {
     border: none;
-
 }
-
-// section {
-//   width:700px;
-// }
