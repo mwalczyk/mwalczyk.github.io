@@ -3,41 +3,6 @@
 
 @import "{{ site.theme }}";
 
-@font-face { 
-	font-family: 'AlteHaasGrotesk';
-	font-weight: 400;
-	font-style: normal;
-	src: url('../fonts/AlteHaasGrotesk/AlteHaasGroteskRegular.ttf');
-}
-
-@font-face { 
-	font-family: 'AlteHaasGrotesk';
-	font-weight: 700;
-	font-style: normal;
-	src: url('../fonts/AlteHaasGrotesk/AlteHaasGroteskBold.ttf');
-}
-
-@font-face {
-	font-family: 'AlteHaasGrotesk';
-	font-weight: 400;
-	font-style: italic;
-	src: url('../fonts/AlteHaasGrotesk/AlteHaasGrotesk-Italic.ttf');
-}
-
-@font-face {
-	font-family: 'AlteHaasGrotesk';
-	font-weight: 700;
-	font-style: italic;
-	src: url('../fonts/AlteHaasGrotesk/AlteHaasGroteskBoldItalic.ttf');
-}
-
-@font-face {
-	font-family: 'InputMono';
-	font-weight: 400;
-	font-style: normal;
-	src: url('../fonts/InputMono/InputMono-Regular.ttf');
-}
-
 h1, h2, h3, h4, p, a, code {
 	font: "Helvetica Neue";
 }
@@ -46,8 +11,8 @@ a:hover, a:focus {
 	font-weight: normal;
 }
 
-code {
-	color: hsl(315, 100%, 40%);
+pre > code {
+	font-size: 75%;
 }	
 
 table {

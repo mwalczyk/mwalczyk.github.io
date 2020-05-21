@@ -87,5 +87,9 @@ This website showcases a few of my personal projects. I also post (a ton of) exp
 > physical materials and digital simulation, embraces the inherent  randomness and error that occur in both 
 > virtual and analog domains.
 
+## Blog
+
+[Ray Marching](./blog-ray-marching.html)
+
 
 
