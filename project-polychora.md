@@ -43,7 +43,6 @@ Together with all even permutations and changes-of-sign of:
   (2, 1, φ, φ^−1)
 
 where φ is the Golden Ratio.
-
 ```
 
 I wrote a C++ header file for enumerating such permutations, together with help from the C++ standard template library and a header file from Eusebeia (for generating _only_ the [even permutations](https://en.wikipedia.org/wiki/Parity_of_a_permutation)). Once the vertices are generated, we can pass them to QHull's convex hull algorithm. Enabling the `Qt` "triangulation" flag results in a list of tetrahedral facets, which can be directly passed into the slicing pipeline. Alternatively, you can pass the `Cn` flag to QHull (where `n` is a small number epsilon), which forces the algorithm to merge coplanar facets. In my tests, a value of `C0.001` sufficed. If you run QHull in this configuration on the vertices of the 120-cell, for example, you would end up with 120 non-simplical facets, each of which was a dodecahedron embedded in 4-space.

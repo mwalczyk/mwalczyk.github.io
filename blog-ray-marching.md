@@ -43,10 +43,10 @@ And if you aren't convinced, check out the diagram below. Here, `||p - c||` deno
 `||p - c|| - r` is negative.
 
 ### Case 2
-`||p - c|| = r`, which means we are somewhere on the surface of the sphere. This implies that `||p - c|| - r` is zero
+`||p - c|| = r`, which means we are somewhere on the surface of the sphere. This implies that `||p - c|| - r` is zero.
 
 ### Case 3
-`||p - c|| > r`, which means we are somewhere outside the sphere. This implies that `||p - c|| - r` is positive
+`||p - c|| > r`, which means we are somewhere outside the sphere. This implies that `||p - c|| - r` is positive.
 
 <p align="center">
   <img src="assets/img/blog/ray-marching/circle-distance.png" width="500" height="auto"/>
