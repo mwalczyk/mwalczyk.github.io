@@ -70,7 +70,8 @@ layout: default
 
 ## Blog Posts
 
-[Ray Marching](./blog-ray-marching.html)
+[Ray Marching](./blog-ray-marching.html)<br>
+[Learning Origami](./blog-learning-origami.html)
 
 ## About
 
