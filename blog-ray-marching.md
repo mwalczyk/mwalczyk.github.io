@@ -1,5 +1,7 @@
 ---
 layout: default
+redirect_from:
+  - /blog/2017/5/25/ray-marching
 ---
 
 # Ray Marching
