@@ -42,6 +42,14 @@ layout: default
     </td>
   </tr>
 
+  <tr>
+    <td style="width:33%">
+      <a href="./project-unfolding.html">
+        <img src="./assets/img/project-unfolding.png"/>
+      </a>
+    </td>
+  </tr>
+
 </table>
 
 ## Ongoing Research
