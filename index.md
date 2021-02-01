@@ -89,7 +89,7 @@ I graduated from the [Digital Media Design](https://catalog.upenn.edu/undergradu
 
 In my free time, I study Hindustani classical music (sitar) with [Josh Feinberg](https://www.joshsitar.com/), fold origami, study mathematics and geometry, learn languages (currently learning Japanese), and compose electronic music.
 
-This website showcases a few of my personal projects. I also post (a ton of) experiments and works-in-progress on my [Instagram](https://www.instagram.com/mwalczyk/) account.
+This website showcases a few of my personal projects. I also post experiments and works-in-progress on my [Instagram](https://www.instagram.com/mwalczyk/) account.
 
 
 
